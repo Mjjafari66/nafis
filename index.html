@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جعبه و آلبوم سازی نفیس - صفحه اصلی</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * { font-family: 'Vazirmatn', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .scroll-animate { opacity: 0; transform: translateY(50px); transition: all 0.8s ease; }
+        .scroll-animate.show { opacity: 1; transform: translateY(0); }
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .bg-pattern { background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4 space-x-reverse">
+                    <img src="public/Screen Shot 1404-03-28 at 13.28.43.png" alt="لوگو نفیس" class="h-12 w-auto">
+                    <div>
+                        <h1 class="text-xl font-bold text-gray-800">جعبه و آلبوم سازی نفیس</h1>
+                        <p class="text-sm text-gray-600">طراحی و تولید آلبوم نفیس</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 transition-colors">خانه</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 transition-colors">درباره ما</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 transition-colors">خدمات</a>
+                    <a href="#catalog" class="text-gray-700 hover:text-blue-600 transition-colors">کاتالوگ</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 transition-colors">نمونه کارها</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 transition-colors">تماس با ما</a>
+                </div>
+                <button class="md:hidden text-gray-700" onclick="toggleMenu()">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 py-2">خانه</a>
+                    <a href="#about" class="text-gray-700 hover:text-blue-600 py-2">درباره ما</a>
+                    <a href="#services" class="text-gray-700 hover:text-blue-600 py-2">خدمات</a>
+                    <a href="#catalog" class="text-gray-700 hover:text-blue-600 py-2">کاتالوگ</a>
+                    <a href="#portfolio" class="text-gray-700 hover:text-blue-600 py-2">نمونه کارها</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 py-2">تماس با ما</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg bg-pattern min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center text-white">
+                <div class="floating mb-8">
+                    <img src="public/Screen Shot 1404-03-28 at 13.28.43.png" alt="لوگو نفیس" class="h-32 w-auto mx-auto mb-6">
+                </div>
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow">جعبه و آلبوم سازی نفیس</h1>
+                <p class="text-xl md:text-2xl mb-8 text-shadow">همکاری با بزرگان صنعت چاپ و بسته بندی، افتخار ماست</p>
+                <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-6 md:space-x-reverse">
+                    <a href="#catalog" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg">
+                        <i class="fas fa-book ml-2"></i>
+                        مشاهده کاتالوگ
+                    </a>
+                    <a href="#contact" class="border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                        <i class="fas fa-phone ml-2"></i>
+                        تماس با ما
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">درباره ما</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="scroll-animate">
+                    <div class="bg-gradient-to-br from-blue-50 to-purple-50 p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">مهدی ابراهیمی</h3>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            این جانب مهدی ابراهیمی مفتخرم که با بیش از 25 سال سابقه در مجموعه خود با تولید محصولات ذیل در خدمت شما صاحبان مشاغل و همکاران عزیز باشم.
+                        </p>
+                        <div class="flex items-center space-x-4 space-x-reverse">
+                            <div class="bg-blue-600 text-white p-3 rounded-full">
+                                <i class="fas fa-award"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">25+ سال تجربه</h4>
+                                <p class="text-gray-600">در صنعت چاپ و بسته بندی</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-animate">
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="bg-green-100 text-green-600 p-3 rounded-full flex-shrink-0">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">کیفیت برتر</h4>
+                                <p class="text-gray-600">استفاده از بهترین مواد اولیه و تکنولوژی روز</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="bg-blue-100 text-blue-600 p-3 rounded-full flex-shrink-0">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">تیم متخصص</h4>
+                                <p class="text-gray-600">همکاری با بهترین طراحان و تکنسین های حرفه ای</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4 space-x-reverse">
+                            <div class="bg-purple-100 text-purple-600 p-3 rounded-full flex-shrink-0">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">حضور در نمایشگاه ها</h4>
+                                <p class="text-gray-600">میدکس، نمایشگاه کتاب و موزه سینما</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">خدمات ما</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">ما با افتخار طیف گسترده ای از خدمات چاپ و بسته بندی را ارائه می دهیم</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white p-6 rounded-2xl shadow-lg scroll-animate">
+                    <div class="bg-blue-100 text-blue-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-box text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">جعبه های نفیس</h3>
+                    <p class="text-gray-600 mb-4">جعبه های درب دار و قابهای کشویی با متریالهای مختلف مانند MDF و مقوا</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• روکش گالینگور</li>
+                        <li>• کاغذ گلاسه</li>
+                        <li>• چرم و پارچه</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-6 rounded-2xl shadow-lg scroll-animate">
+                    <div class="bg-green-100 text-green-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-book text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">آلبوم سازی</h3>
+                    <p class="text-gray-600 mb-4">تولید آلبومهای کاغذ دیواری و پوستر در ابعاد مختلف</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• آلبوم کاغذ دیواری</li>
+                        <li>• آلبوم پوستر</li>
+                        <li>• ابعاد سفارشی</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-6 rounded-2xl shadow-lg scroll-animate">
+                    <div class="bg-purple-100 text-purple-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-th text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">کالیته ها</h3>
+                    <p class="text-gray-600 mb-4">انواع کالیته های موکت، پارکت و کفپوش</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• کالیته موکت</li>
+                        <li>• کالیته پارکت</li>
+                        <li>• کالیته کفپوش</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-6 rounded-2xl shadow-lg scroll-animate">
+                    <div class="bg-red-100 text-red-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-book-open text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">صحافی</h3>
+                    <p class="text-gray-600 mb-4">مجموعه کامل صحافی کتاب و سررسید</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• چسب گرم و سرد</li>
+                        <li>• دوخت اتوماتیک</li>
+                        <li>• پانچ و فنر</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-6 rounded-2xl shadow-lg scroll-animate">
+                    <div class="bg-yellow-100 text-yellow-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-cut text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">برش لیزر</h3>
+                    <p class="text-gray-600 mb-4">خدمات برش و حک لیزر با دقت بالا</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• برش دقیق</li>
+                        <li>• حکاکی لیزر</li>
+                        <li>• طراحی سفارشی</li>
+                    </ul>
+                </div>
+                <div class="card-hover bg-white p-6 rounded-2xl shadow-lg scroll-animate">
+                    <div class="bg-indigo-100 text-indigo-600 p-4 rounded-full w-16 h-16 flex items-center justify-center mb-4">
+                        <i class="fas fa-print text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">خدمات چاپ</h3>
+                    <p class="text-gray-600 mb-4">صفر تا صد کلیه خدمات چاپ و پس از چاپ</p>
+                    <ul class="text-sm text-gray-500 space-y-1">
+                        <li>• چاپ دیجیتال</li>
+                        <li>• چاپ افست</li>
+                        <li>• خدمات پس از چاپ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Section -->
+    <section id="catalog" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">کاتالوگ محصولات</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">مجموعه کاملی از محصولات و خدمات ما را مشاهده کنید</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card-hover bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-2xl text-center scroll-animate">
+                    <div class="bg-blue-600 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-box text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">جعبه های لوکس</h3>
+                    <p class="text-gray-600 text-sm">جعبه های درب دار نفیس</p>
+                </div>
+                <div class="card-hover bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-2xl text-center scroll-animate">
+                    <div class="bg-green-600 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-images text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">آلبوم کاغذ دیواری</h3>
+                    <p class="text-gray-600 text-sm">انواع آلبوم های نمایشی</p>
+                </div>
+                <div class="card-hover bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-2xl text-center scroll-animate">
+                    <div class="bg-purple-600 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-th-large text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">کالیته موکت</h3>
+                    <p class="text-gray-600 text-sm">نمونه های موکت و کفپوش</p>
+                </div>
+                <div class="card-hover bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-2xl text-center scroll-animate">
+                    <div class="bg-red-600 text-white p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-book text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800 mb-2">سررسید و دفتر</h3>
+                    <p class="text-gray-600 text-sm">انواع سررسید و دفترچه</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">نمونه کارها</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <div class="bg-yellow-50 border-r-4 border-yellow-400 p-4 max-w-4xl mx-auto">
+                    <p class="text-gray-700">
+                        <i class="fas fa-info-circle text-yellow-600 ml-2"></i>
+                        تصاویر برخی از محصولات به علت مجاز نبودن انتشار محتوا از سوی سفارش دهندگان این مجموعه، در این سایت به نمایش گذاشته نشد.
+                    </p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden scroll-animate">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <i class="fas fa-box text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">جعبه های تبلیغاتی</h3>
+                        <p class="text-gray-600 text-sm">طراحی و تولید جعبه های تبلیغاتی برای برندهای مختلف</p>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden scroll-animate">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <i class="fas fa-book-open text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">آلبوم های نمایشگاهی</h3>
+                        <p class="text-gray-600 text-sm">آلبوم های حرفه ای برای نمایشگاه های معتبر</p>
+                    </div>
+                </div>
+                <div class="card-hover bg-white rounded-2xl shadow-lg overflow-hidden scroll-animate">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center">
+                        <i class="fas fa-award text-white text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold text-gray-800 mb-2">پروژه های ویژه</h3>
+                        <p class="text-gray-600 text-sm">همکاری با موزه سینما و نمایشگاه کتاب</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 scroll-animate">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">تماس با ما</h2>
+                <div class="w-24 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">برای سفارش و مشاوره با ما در تماس باشید</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="scroll-animate">
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4 space-x-reverse p-4 bg-blue-50 rounded-xl">
+                            <div class="bg-blue-600 text-white p-3 rounded-full">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">شماره همراه</h4>
+                                <p class="text-gray-600" dir="ltr">09128946359</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 space-x-reverse p-4 bg-green-50 rounded-xl">
+                            <div class="bg-green-600 text-white p-3 rounded-full">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">کانال تلگرام</h4>
+                                <p class="text-gray-600">@GHABENAFIS</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 space-x-reverse p-4 bg-purple-50 rounded-xl">
+                            <div class="bg-purple-600 text-white p-3 rounded-full">
+                                <i class="fab fa-telegram"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">آیدی تلگرام</h4>
+                                <p class="text-gray-600">@GH_NAFIS</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4 space-x-reverse p-4 bg-red-50 rounded-xl">
+                            <div class="bg-red-600 text-white p-3 rounded-full">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">ایمیل</h4>
+                                <p class="text-gray-600">info@nafisbest.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-animate">
+                    <form class="space-y-6 bg-gray-50 p-8 rounded-2xl">
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">نام و نام خانوادگی</label>
+                            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">شماره تماس</label>
+                            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">موضوع</label>
+                            <select class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option>انتخاب کنید</option>
+                                <option>سفارش جعبه</option>
+                                <option>سفارش آلبوم</option>
+                                <option>خدمات چاپ</option>
+                                <option>سایر</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 font-semibold mb-2">پیام</label>
+                            <textarea rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-xl font-semibold hover:bg-blue-700 transition-colors">
+                            <i class="fas fa-paper-plane ml-2"></i>
+                            ارسال پیام
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-4 space-x-reverse mb-4">
+                        <img src="public/Screen Shot 1404-03-28 at 13.28.43.png" alt="لوگو نفیس" class="h-12 w-auto">
+                        <div>
+                            <h3 class="text-xl font-bold">جعبه و آلبوم سازی نفیس</h3>
+                            <p class="text-gray-400">کیفیت و اعتماد</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400">بیش از 25 سال تجربه در صنعت چاپ و بسته بندی</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">خدمات</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>جعبه سازی نفیس</li>
+                        <li>آلبوم سازی</li>
+                        <li>خدمات چاپ</li>
+                        <li>برش لیزر</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">تماس با ما</h4>
+                    <div class="space-y-2 text-gray-400">
+                        <p><i class="fas fa-phone ml-2"></i> 09128946359</p>
+                        <p><i class="fab fa-telegram ml-2"></i> @GHABENAFIS</p>
+                        <p><i class="fas fa-envelope ml-2"></i> info@nafisbest.com</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 1403 جعبه و آلبوم سازی نفیس. تمامی حقوق محفوظ است.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Header background on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-white/95');
+            } else {
+                header.classList.remove('bg-white/95');
+            }
+        });
+    </script>
+</body>
+</html>
